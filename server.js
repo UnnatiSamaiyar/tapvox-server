@@ -29,6 +29,16 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/contact", contactRoutes);
 app.use("/api", blogRoute);
 
+// Root route
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Welcome to Tapvox Server",
+    status: "success",
+    docs: "/api", // you can point to your API root or docs if you want
+  });
+});
+
+
 // MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI, {
