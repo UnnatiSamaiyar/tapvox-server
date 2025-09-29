@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5001;
 // Middlewares
 // Middlewares
 const corsOptions = {
-  origin: ["https://tapvox.net", "https://www.tapvox.net", "http://localhost:3000", "http://localhost:5173", "http://localhost:5174"],
+  origin: ["https://tapvox.net", "https://www.tapvox.net", "http://localhost:3000", "http://localhost:5173", "http://localhost:5174", "https://www.tapvox.net/admin"],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
