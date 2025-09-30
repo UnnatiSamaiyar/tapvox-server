@@ -25,11 +25,12 @@ router.post("/submit-contact", async (req, res) => {
 router.get("/get-contact", async (req, res) => {
   try {
     const contacts = await Contact.find().sort({ createdAt: -1 });
-    res.json(contacts);
+    res.json(contacts); // <-- plain array
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Server error" });
   }
 });
+
 
 module.exports = router;
